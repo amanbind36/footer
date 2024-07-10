@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #grid {
+        display: grid;
+        width: 90%;
+        height: 500px;
+        color: white;
+       
+        margin: auto;
+        grid-template-areas:
+          "a b b"
+          "c c c";
+      }
+      #grid > div {
+        height: 300px;
+      }
+      .hide {
+        display: none;
+      }
+      #grid > div:nth-of-type(1) {
+        grid-area: a;
+        background-color: rgb(1, 2, 110);
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        
+      }
+      
+      #grid > div:nth-of-type(2) {
+        grid-area: b;
+        background-color: rgb(48, 64, 175);
+        display: flex;
+        justify-content: space-around;
+      }
+      #grid > div:nth-of-type(3) {
+        grid-area: c;
+        display: flex;
+        margin-bottom: 100px;
+        background-color: rgb(34, 34, 34);
+        justify-content: space-around;
+        height: 100px;
+      }
+      #grid > div:nth-of-type(3) > div:nth-of-type(1) {
+        display: flex;
+        width: 300px;
+        align-items: center;
+      }
+      #grid > div:nth-of-type(3) > div:nth-of-type(2) {
+        display: flex;
+        width: 600px;
+        justify-content: space-between;
+        align-items: center;
+      }
+      hr {
+        color: white;
+        background-color: white;
+        height: 50px;
+        width: 2px;
+      }
+      @media (width <= 768px) {
+        #grid {
+          grid-template-areas:
+            "b b b"
+            "a a a "
+            "c c c";
+        }
+        #grid > div:nth-of-type(3) > div:nth-of-type(1) {
+          display: none;
+        }
+      }
+      @media (width <= 425px) {
+        #grid {
+          grid-template-areas:
+            "c c c"
+            "b b b "
+            "a a a";
+        }
+        #grid > div:nth-of-type(3) > div:nth-of-type(1) {
+          display: none;
+        }
+        #grid > div:nth-of-type(3) {
+          margin-bottom: 0;
+        }
+        
+       
+        .hide{
+            display: block;
+            font-size: 20px;
+            
+           
+        }.hide>details{
+            width: 100%;
+            padding: 20px;
+            text-align: start;
+           
+        }
+        .show{
+            display: none;
+        }
+        #grid > div:nth-of-type(2) {
+      height: auto;
+      }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grid">
+      <div>
+        <img
+          class="img"
+          src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRTmFSLtifkSfq0G1cFsmHAax-jAF6llZKir8G1ltpkkCVD34Kj"
+          alt=""
+        />
+      </div>
+      <div>
+        <div class="show">
+          <h3>Shop</h3>
+          <p>Gift cards</p>
+          <p>Etsy Registry</p>
+          <p>Sitemap</p>
+          <p>Etsy blog</p>
+          <p>Etsy United Kingdom</p>
+          <p>Etsy Germany</p>
+          <p>Etsy Canada</p>
+        </div>
+        <div class="show">
+          <h3>Shell</h3>
+          <p>Shell on Etsy</p>
+          <p>Tems</p>
+          <p>Forum</p>
+          <p>Affilaties & Creaters</p>
+        </div>
+        <div class="show">
+          <h3>About</h3>
+          <p>Gift cards</p>
+          <p>Etsy Registry</p>
+          <p>Sitemap</p>
+          <p>Etsy blog</p>
+          <p>Etsy United Kingdom</p>
+          <p>Etsy Germany</p>
+          <p>Etsy Canada</p>
+        </div>
+        <div class="show">
+          <h3>Shop</h3>
+          <p>Gift cards</p>
+          <p>Etsy Registry</p>
+          <p>Sitemap</p>
+          <p>Etsy blog</p>
+          <p>Etsy United Kingdom</p>
+          <p>Etsy Germany</p>
+          <p>Etsy Canada</p>
+        </div>
+        <div class="hide">
+          <details>
+            <summary>Shop</summary>
+
+            <p>Gift cards</p>
+            <p>Etsy Registry</p>
+            <p>Sitemap</p>
+            <p>Etsy blog</p>
+            <p>Etsy United Kingdom</p>
+            <p>Etsy Germany</p>
+            <p>Etsy Canada</p>
+          </details>
+          <details>
+            <summary>Shell</summary>
+
+            <p>Shell on Etsy</p>
+            <p>Tems</p>
+            <p>Forum</p>
+            <p>Affilaties & Creaters</p>
+          </details>
+          <details>
+            <summary>About</summary>
+
+            <p>Gift cards</p>
+            <p>Etsy Registry</p>
+            <p>Sitemap</p>
+            <p>Etsy blog</p>
+            <p>Etsy United Kingdom</p>
+            <p>Etsy Germany</p>
+            <p>Etsy Canada</p>
+          </details>
+          <details>
+            <summary>Shop</summary>
+
+            <p>Gift cards</p>
+            <p>Etsy Registry</p>
+            <p>Sitemap</p>
+            <p>Etsy blog</p>
+            <p>Etsy United Kingdom</p>
+            <p>Etsy Germany</p>
+            <p>Etsy Canada</p>
+          </details>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img
+            style="border-radius: 50%"
+            width="80px"
+            src="data:image/jpeg;base64,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"
+            alt=""
+          />
+          <span>India</span>
+          <hr />
+          <span>English</span>
+          <hr />
+          <span>₹ (INR)</span>
+        </div>
+        <div>
+          <span>@2024 Etsy,inc</span>
+          <span> Term of use</span>
+          <span>Privecy</span>
+          <span> Intrest based ads</span>
+          <span>Local shops</span>
+          <span>Region</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
